@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AD DEV Terminal</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: monospace;
+    }
+    
+    .prompt {
+      color: limegreen;
+    }
+    
+    .input {
+      color: white;
+    }
+    
+    .cursor {
+      display: inline-block;
+      width: 10px;
+      height: 1em;
+      background-color: white;
+      animation: blink 0.8s step-end infinite;
+    }
+    
+    @keyframes blink {
+      from, to {
+        background-color: white;
+      }
+      50% {
+        background-color: transparent;
+      }
+    }
+  </style>
+</head>
+<body>
+  <pre>
+      ____          _    ____  _       _     
+     / ___|   ___  | |  / ___|| |__   (_)  _ 
+    | |  _   / _ \ | | | |    | '_ \  | | (_)
+    | |_| | | (_) || | | |___ | | | | | |  _ 
+     \____|  \___/ |_|  \____||_| |_| |_| (_)
+                                              
+  </pre>
+  <pre>
+    <span class="prompt">&gt;</span> <span class="input">Portfolio Website of Aeon Borealis</span>
+  </pre>
+  
+  <div>
+    <h2>Embedded Video:</h2>
+    <div>
+      <label for="video-name">Video Name:</label>
+      <input type="text" id="video-name">
+    </div>
+    <div>
+      <label for="video-url">YouTube URL:</label>
+      <input type="text" id="video-url">
+    </div>
+    <div>
+      <button onclick="embedVideo()">Embed Video</button>
+    </div>
+    <div id="video-container"></div>
+  </div>
+  
+  <script>
+    function embedVideo() {
+      var videoName = document.getElementById("video-name").value;
+      var videoUrl = document.getElementById("video-url").value;
+      var videoId = videoUrl.match(/(?:v=)([^&]+)/)[1];
+      var embedHtml = '<iframe width="560" height="315" src="https://www.youtube.com/embed/' + videoId + '" frameborder="0" allowfullscreen></iframe>';
+      document.getElementById("video-container").innerHTML = '<h3>' + videoName + '</h3>' + embedHtml;
+    }
+  </script>
+</body>
+</html>
