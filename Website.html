@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tall Website with Videos</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: Arial, sans-serif;
+			background-color: #f2f2f2;
+		}
+		
+		#header {
+			height: 100px;
+			background-color: #333;
+			color: #fff;
+			text-align: center;
+			padding: 20px;
+		}
+		
+		#main {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			margin-top: 20px;
+		}
+		
+		#main .video {
+			position: relative;
+			width: 80%;
+			max-width: 800px;
+			margin: 40px 0;
+		}
+		
+		#main .video iframe {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			border: none;
+		}
+		
+		#main .overlay {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			padding: 40px;
+			box-sizing: border-box;
+			background-color: rgba(0,0,0,0.5);
+			color: #fff;
+			opacity: 0;
+			transition: opacity 0.2s ease-in-out;
+		}
+		
+		#main .overlay:hover {
+			opacity: 1;
+		}
+		
+		#main .overlay h2 {
+			font-size: 36px;
+			margin: 0;
+			margin-bottom: 20px;
+			text-align: center;
+			text-shadow: 1px 1px #333;
+		}
+		
+		#main .overlay p {
+			font-size: 18px;
+			margin: 0;
+			text-align: center;
+			text-shadow: 1px 1px #333;
+		}
+	</style>
+</head>
+<body>
+	<header id="header">
+		<h1>Tall Website with Videos</h1>
+	</header>
+	<main id="main">
+		<div class="video">
+			<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<div class="overlay">
+				<h2>Video 1 Title</h2>
+				<p>Text overlay for video 1</p>
+			</div>
+		</div>
+		<div class="video">
+			<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<div class="overlay">
+				<h2>Video 2 Title</h2>
+				<p>Text overlay for video 2</p>
+			</div>
+		</div>
+		<div class="video">
+			<iframe src="https://www.youtube.com/embed/d
